@@ -1,0 +1,28 @@
+; Wyckoff Trading Bot - Moderate Settings
+; Balanced approach for intermediate traders
+; Use on H1 timeframe with major forex pairs
+
+; General Settings
+MagicNumber=123456
+TradeComment=Wyckoff Moderate
+
+; Risk Management - Moderate
+RiskPercent=1.0
+MaxLotSize=5.0
+MinLotSize=0.01
+MaxSpread=30
+
+; Wyckoff Parameters - Balanced
+AccumulationBars=50
+VolumePeriod=20
+VolumeThreshold=1.5
+TrendPeriod=50
+TradeAccumulation=true
+TradeDistribution=true
+
+; Exit Settings - Standard Targets
+TakeProfitMultiplier=2.0
+StopLossMultiplier=1.0
+ATRPeriod=14
+UseTrailingStop=true
+TrailingStopMultiplier=1.5

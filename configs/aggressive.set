@@ -1,0 +1,28 @@
+; Wyckoff Trading Bot - Aggressive Settings
+; Higher risk/reward for experienced traders
+; Use on M30 or H1 timeframes
+
+; General Settings
+MagicNumber=123456
+TradeComment=Wyckoff Aggressive
+
+; Risk Management - Aggressive
+RiskPercent=2.0
+MaxLotSize=10.0
+MinLotSize=0.01
+MaxSpread=40
+
+; Wyckoff Parameters - More Flexible
+AccumulationBars=35
+VolumePeriod=15
+VolumeThreshold=1.3
+TrendPeriod=40
+TradeAccumulation=true
+TradeDistribution=true
+
+; Exit Settings - Tighter Targets
+TakeProfitMultiplier=1.5
+StopLossMultiplier=0.8
+ATRPeriod=14
+UseTrailingStop=true
+TrailingStopMultiplier=1.2

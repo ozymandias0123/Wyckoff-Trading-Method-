@@ -1,0 +1,42 @@
+# MetaTrader 5 compiled files
+*.ex5
+*.ex4
+
+# MetaTrader logs
+*.log
+
+# Backup files
+*.bak
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+/tmp/
+*.tmp
+*.temp
+
+# Test results
+/Tester/
+/MQL5/Files/
+/MQL5/Logs/
+
+# Build artifacts
+/MQL5/Libraries/
+*.dll
+*.so
+*.dylib
