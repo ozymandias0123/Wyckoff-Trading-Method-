@@ -1,0 +1,21 @@
+{
+    "mt5_login": 0,
+    "mt5_password": "",
+    "mt5_server": "",
+    
+    "telegram_token": "YOUR_TELEGRAM_BOT_TOKEN",
+    "telegram_chat_id": "YOUR_TELEGRAM_CHAT_ID",
+    
+    "symbol": "EURUSD",
+    "timeframe": "M15",
+    "lot_size": 0.01,
+    
+    "risk_per_trade": 0.02,
+    "max_lot_size": 1.0,
+    
+    "accumulation_threshold": 0.015,
+    "volume_spike_threshold": 2.0,
+    "spring_depth": 0.0005,
+    
+    "magic_number": 234567
+}
