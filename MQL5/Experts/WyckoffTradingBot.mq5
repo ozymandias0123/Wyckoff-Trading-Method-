@@ -1,9 +1,9 @@
 //+------------------------------------------------------------------+
 //|                                          WyckoffTradingBot.mq5   |
-//|                        Copyright 2026, Wyckoff Trading Method    |
+//|                        Copyright 2025, Wyckoff Trading Method    |
 //|                                             https://www.mql5.com |
 //+------------------------------------------------------------------+
-#property copyright "Copyright 2026, Wyckoff Trading Method"
+#property copyright "Copyright 2025, Wyckoff Trading Method"
 #property link      "https://www.mql5.com"
 #property version   "1.00"
 #property description "Automated trading bot implementing the Wyckoff Trading Method"
@@ -250,8 +250,9 @@ void ManagePositions()
 //+------------------------------------------------------------------+
 double CalculateLotSize(double stopLossDistance)
 {
-    double accountBalance = AccountInfoDouble(ACCOUNT_BALANCE);
-    double riskAmount = accountBalance * RiskPercent / 100.0;
+    //--- Use equity instead of balance to account for floating P&L
+    double accountEquity = AccountInfoDouble(ACCOUNT_EQUITY);
+    double riskAmount = accountEquity * RiskPercent / 100.0;
     
     double tickValue = SymbolInfoDouble(_Symbol, SYMBOL_TRADE_TICK_VALUE);
     double tickSize = SymbolInfoDouble(_Symbol, SYMBOL_TRADE_TICK_SIZE);

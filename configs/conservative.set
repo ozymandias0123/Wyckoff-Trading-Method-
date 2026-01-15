@@ -1,9 +1,10 @@
 ; Wyckoff Trading Bot - Conservative Settings
 ; Recommended for beginners and risk-averse traders
 ; Use on H1 or H4 timeframes with major forex pairs
+; Note: Each config has a unique MagicNumber to prevent conflicts
 
 ; General Settings
-MagicNumber=123456
+MagicNumber=123001
 TradeComment=Wyckoff Conservative
 
 ; Risk Management - Conservative

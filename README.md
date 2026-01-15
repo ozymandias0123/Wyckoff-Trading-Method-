@@ -325,7 +325,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Version History
 
-- **v1.00** (2026-01-15): Initial release
+- **v1.00** (2025-01-15): Initial release
   - Core Wyckoff phase detection
   - Volume spread analysis
   - Pattern recognition (Spring, Upthrust, SOS, SOW)

@@ -188,6 +188,10 @@ Position Size = Risk / Stop Distance
 With 0.02 lots:
 - Risk: $10 (1% of account)
 - Target: $20 (2% of account)
+
+Note: Pip values vary by symbol, account currency, and broker.
+The example uses $10 per pip for illustration only. Actual
+values depend on lot size and symbol specifications.
 ```
 
 ## Parameter Impact Visualization

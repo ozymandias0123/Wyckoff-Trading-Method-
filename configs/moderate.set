@@ -1,9 +1,10 @@
 ; Wyckoff Trading Bot - Moderate Settings
 ; Balanced approach for intermediate traders
 ; Use on H1 timeframe with major forex pairs
+; Note: Each config has a unique MagicNumber to prevent conflicts
 
 ; General Settings
-MagicNumber=123456
+MagicNumber=123002
 TradeComment=Wyckoff Moderate
 
 ; Risk Management - Moderate

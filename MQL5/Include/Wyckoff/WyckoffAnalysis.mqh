@@ -1,9 +1,9 @@
 //+------------------------------------------------------------------+
 //|                                          WyckoffAnalysis.mqh      |
-//|                        Copyright 2026, Wyckoff Trading Method    |
+//|                        Copyright 2025, Wyckoff Trading Method    |
 //|                                             https://www.mql5.com |
 //+------------------------------------------------------------------+
-#property copyright "Copyright 2026, Wyckoff Trading Method"
+#property copyright "Copyright 2025, Wyckoff Trading Method"
 #property link      "https://www.mql5.com"
 #property version   "1.00"
 
@@ -353,11 +353,14 @@ void CWyckoffAnalysis::UpdateTradingRange()
 {
     double highArray[];
     double lowArray[];
+    double closeArray[];
     ArraySetAsSeries(highArray, true);
     ArraySetAsSeries(lowArray, true);
+    ArraySetAsSeries(closeArray, true);
     
     if(CopyHigh(m_symbol, m_period, 0, m_accumulationBars, highArray) <= 0 ||
-       CopyLow(m_symbol, m_period, 0, m_accumulationBars, lowArray) <= 0)
+       CopyLow(m_symbol, m_period, 0, m_accumulationBars, lowArray) <= 0 ||
+       CopyClose(m_symbol, m_period, 0, m_accumulationBars, closeArray) <= 0)
     {
         Print("Error copying price data: ", GetLastError());
         return;
@@ -372,9 +375,9 @@ void CWyckoffAnalysis::UpdateTradingRange()
     double atr = 0;
     for(int i = 1; i < m_accumulationBars; i++)
     {
-        double tr = MathMax(highArray[i-1] - lowArray[i-1],
-                    MathMax(MathAbs(highArray[i-1] - lowArray[i]),
-                            MathAbs(lowArray[i-1] - lowArray[i])));
+        double tr = MathMax(highArray[i] - lowArray[i],
+                    MathMax(MathAbs(highArray[i] - closeArray[i-1]),
+                            MathAbs(lowArray[i] - closeArray[i-1])));
         atr += tr;
     }
     atr /= (m_accumulationBars - 1);

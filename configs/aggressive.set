@@ -1,9 +1,10 @@
 ; Wyckoff Trading Bot - Aggressive Settings
 ; Higher risk/reward for experienced traders
 ; Use on M30 or H1 timeframes
+; Note: Each config has a unique MagicNumber to prevent conflicts
 
 ; General Settings
-MagicNumber=123456
+MagicNumber=123003
 TradeComment=Wyckoff Aggressive
 
 ; Risk Management - Aggressive
